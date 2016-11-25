@@ -1,3 +1,8 @@
+//-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~
+// Zen Fabric Library
+//
+// Copyright (C) 2001 - 2016 Raymond A. Richards
+//-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~
 #pragma once
 #include "Configuration.hpp"
 
@@ -7,6 +12,9 @@
 
 #include <Zen/Enterprise/I_Connection.hpp>
 
+//-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~
+namespace Zen {
+namespace Fabric {
 //-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~
 /// Connection to Zen Spaces server daemon
 class FABRIC_DLL_LINK SpacesConnection
@@ -18,6 +26,12 @@ public:
     virtual void registerReactor(Zen::Enterprise::I_Reactor& _reactor);
     /// @}
 
+    /// @name SpacesConnection implementation
+    /// @{
+public:
+        
+    /// @}
+    
     /// @name Structors
     /// @{
 public:
@@ -42,4 +56,7 @@ private:
     zmqpp::socket   m_subSocket;
 };  // class SpacesConnection
 
+//-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~
+}   // namespace Fabric
+}   // namespace Zen
 //-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~
